@@ -1,27 +1,33 @@
 import './globals.css'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
-import Modal from './components/modals/Modal'
 import ClientOnly from './components/ClientOnly'
+import RegisterModal from './components/modals/RegisterModal'
+import LoginModal from './components/modals/LoginModal'
+import ToasterProvider from './Providers/ToasterProvider'
+import getCurrentUser from './actions/getCurrentUser'
 
-const inter = Nunito({ subsets: ['latin'] })
+const font = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb clone',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const currentUser = await getCurrentUser()
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <ClientOnly>
-          <Navbar />
-          <Modal isOpen />
+          <ToasterProvider />
+          <Navbar currentUser={currentUser} />
+          <LoginModal />
+          <RegisterModal />
         </ClientOnly>
         {children}
       </body>
