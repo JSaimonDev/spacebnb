@@ -7,3 +7,29 @@ html,
 :root{
     height: 100%;
 }
+
+
+/* Style scrollbar */
+::-webkit-scrollbar {
+       width: 10px;
+   }
+
+::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+
+::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+}
+/* End Style scrollbar */
+
+
+/* Leaflet style */
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top{
+    z-index: 0 !important
+}
+/* End Leaflet style */

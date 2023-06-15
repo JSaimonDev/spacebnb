@@ -1,3 +1,5 @@
+'use client'
+
 import { IconType } from 'react-icons'
 import qs from 'query-string'
 import { useRouter, useSearchParams } from 'next/navigation';

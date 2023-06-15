@@ -1,3 +1,5 @@
+'use client'
+
 import Container from "../Container"
 import CategoryBox from "../CategoryBox"
 
@@ -19,7 +21,7 @@ import { TbBeach, TbMountain, TbPool } from 'react-icons/tb'
 
 import { usePathname, useSearchParams } from "next/navigation"
 
-const categories = [
+export const categories = [
     {
         label: 'Beach',
         icon: TbBeach,
@@ -94,8 +96,7 @@ const categories = [
         label: 'Lux',
         icon: IoDiamond,
         description: 'This property is luxurious!'
-    },
-
+    }
 ]
 
 const Categories: React.FC = () => {
