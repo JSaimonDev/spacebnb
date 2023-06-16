@@ -31,7 +31,9 @@ export default async function RootLayout({
           <RegisterModal />
           <RentModal />
         </ClientOnly>
-        {children}
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   )
