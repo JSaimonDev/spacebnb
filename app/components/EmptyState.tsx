@@ -8,7 +8,7 @@ import React from "react";
 interface EmptyState {
     title?: string
     subtitle?: string
-    showReset: boolean
+    showReset?: boolean
 }
 
 const EmptyState: React.FC<EmptyState> = ({
