@@ -33,3 +33,14 @@ html,
     z-index: 0 !important
 }
 /* End Leaflet style */
+
+/* Calendar */
+.rdMonth {
+    width: 100% !important;
+}
+
+.rdrCalendarWrapper{
+font-size: 16px !important;
+width: 100% !important
+}
+/* End Calendar */
