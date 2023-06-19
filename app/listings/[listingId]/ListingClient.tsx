@@ -72,8 +72,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
             .then(() => {
                 toast.success('Listing reserved!')
                 setDateRange(initialDateRange)
-                // Redirect to /trips
-                router.refresh()
+                router.push('/trips')
             })
             .catch(() => {
                 toast.error('Something went wrong')
@@ -107,7 +106,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
     return (
         < Container >
-            <div className='max-w-screen-lg mx-auto pt-8 pb-10'>
+            <div className='max-w-screen-lg mx-auto pb-10'>
                 <div className="flex flex-col gap-6">
                     <ListingHead
                         title={listing.title}

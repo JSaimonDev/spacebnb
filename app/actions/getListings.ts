@@ -7,6 +7,12 @@ export default async function getListings() {
                 createdAt: 'desc'
             }
         })
+
+            if (listings.length === 0) {
+            return []
+        }
+
+
         return listings
     } catch (error: any) {
         throw new Error(error)

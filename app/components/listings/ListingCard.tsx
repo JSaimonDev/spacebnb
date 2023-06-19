@@ -1,7 +1,6 @@
 'use client'
 
-import { Reservation } from "@prisma/client";
-import { SafeListing } from "@/app/types";
+import { SafeListing, SafeReservation } from "@/app/types";
 
 import { SafeUser } from "@/app/types";
 import { useRouter } from "next/navigation";
@@ -14,7 +13,7 @@ import Button from "../Button";
 
 interface ListingCardProps {
     data: SafeListing
-    reservation?: Reservation
+    reservation?: SafeReservation
     onAction?: (id: string) => void
     disabled?: boolean
     actionLabel?: string
