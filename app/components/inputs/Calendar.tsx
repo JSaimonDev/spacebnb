@@ -10,12 +10,14 @@ interface CalendarProps {
     value: Range
     onChange: (value: RangeKeyDict) => void
     disabledDates?: Date[]
+    className?: string
 }
 
 const Calendar: React.FC<CalendarProps> = ({
     value,
     onChange,
-    disabledDates
+    disabledDates,
+    className
 }) => {
     return (
         <DateRange
