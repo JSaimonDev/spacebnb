@@ -5,11 +5,7 @@ import { IconType } from "react-icons"
 import useCountries from "@/app/hooks/useCountries "
 import Avatar from "../Avatar"
 import ListingCategory from "./ListingCategory"
-import dynamic from "next/dynamic"
-
-const Map = dynamic(() => import('../Map'), {
-    ssr: false
-})
+import Image from "next/image"
 
 interface ListingInfoProps {
     user: SafeUser
@@ -88,7 +84,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
                 {description}
             </div>
             <hr />
-            <Map center={coordinates} />
+            <Image src='/images/Milky_way_map.jpg' alt='planet gif' width={640} height={360} className="rounded-lg" />
         </div>
     );
 }

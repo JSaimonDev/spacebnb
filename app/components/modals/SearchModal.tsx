@@ -13,6 +13,7 @@ import { formatISO } from 'date-fns'
 import Heading from "../Heading";
 import Calendar from "../inputs/Calendar";
 import Counter from "../inputs/Counter";
+import Image from "next/image";
 
 enum STEPS {
     LOCATION = 0,
@@ -26,7 +27,7 @@ const SearchModal = () => {
     const params = useSearchParams()
 
     const [step, setStep] = useState(STEPS.LOCATION)
-    const [location, setLocation] = useState<CountrySelectValue>()
+    const [location, setLocation] = useState<string>()
     const [guestCount, setGuestCount] = useState(1)
     const [roomCount, setRoomCount] = useState(1)
     const [bathroomCount, setBathroomCount] = useState(1)
@@ -62,7 +63,7 @@ const SearchModal = () => {
 
         const updatedQuery: any = {
             ...currentQuery,
-            locationValue: location?.value,
+            locationValue: location,
             guestCount,
             roomCount,
             bathroomCount
@@ -118,14 +119,14 @@ const SearchModal = () => {
         <div className="flex flex-col gap-8">
             <Heading
                 title="Where do you wanna go?"
-                subtitle="Find the perfect location!"
+                subtitle="Search for the perfect location!"
             />
             <CountrySelect
-                value={location}
-                onChange={(value) => setLocation(value as CountrySelectValue)}
+                onChange={setLocation}
             />
             <hr />
-            <Map center={location?.latlng} />
+            {/* <Map center={location?.latlng} /> */}
+            <Image src='/images/galaxy-animated.gif' alt='galaxy gif' width={600} height={256} className="rounded-lg" />
         </div>
     )
 
