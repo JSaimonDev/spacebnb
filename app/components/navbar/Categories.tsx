@@ -3,100 +3,93 @@
 import Container from "../Container"
 import CategoryBox from "../CategoryBox"
 
+import { FaEarthAsia } from 'react-icons/fa6'
 import {
-    GiWindmill,
-    GiBarn,
-    GiBoatFishing,
-    GiCactus,
-    GiCastle,
-    GiCaveEntrance,
-    GiForestCamp,
-    GiIsland,
+    GiMoonOrbit, GiAsteroid, GiCometSpark, GiLava, GiFrozenOrb, GiJupiter,
+    GiAtomicSlashes, GiSun, GiDustCloud, GiBlackHoleBolas, GiLeechingWorm
 } from 'react-icons/gi'
-import { MdOutlineVilla } from 'react-icons/md'
-import { IoDiamond } from 'react-icons/io5'
-import { BsSnow } from 'react-icons/bs'
-import { FaSkiing } from 'react-icons/fa'
-import { TbBeach, TbMountain, TbPool } from 'react-icons/tb'
+import { IoWater } from 'react-icons/io5'
+import { SiSaturn, SiQuasar } from 'react-icons/si'
 
 import { usePathname, useSearchParams } from "next/navigation"
 
+
 export const categories = [
     {
-        label: 'Beach',
-        icon: TbBeach,
-        description: 'This property is close to the beach!'
+        label: 'Moon',
+        icon: GiMoonOrbit,
+        description: 'Satellite'
     },
     {
-        label: 'Windmills',
-        icon: GiWindmill,
-        description: 'This property has windmills!'
+        label: 'Asteroid',
+        icon: GiAsteroid,
+        description: 'Minor rock planet'
     },
     {
-        label: 'Modern',
-        icon: MdOutlineVilla,
-        description: 'This property is modern!'
+        label: 'Comet',
+        icon: GiCometSpark,
+        description: 'Icy space object with gas tail'
     },
     {
-        label: 'Countryside',
-        icon: TbMountain,
-        description: 'This property is in the countryside!'
+        label: 'Terrestrial',
+        icon: FaEarthAsia,
+        description: 'Terrestrial planet'
     },
     {
-        label: 'Pools',
-        icon: TbPool,
-        description: 'This property has a pool!'
+        label: 'Ocean',
+        icon: IoWater,
+        description: 'Ocean planet'
     },
     {
-        label: 'Islands',
-        icon: GiIsland,
-        description: 'This property is on an island!'
+        label: 'Lava',
+        icon: GiLava,
+        description: 'Lava planet'
     },
     {
-        label: 'Lake',
-        icon: GiBoatFishing,
-        description: 'This property is close to a lake!'
+        label: 'Ice',
+        icon: GiFrozenOrb,
+        description: 'Ice planet'
     },
     {
-        label: 'Skiing',
-        icon: FaSkiing,
-        description: 'This property has skiing activities!'
+        label: 'Gas Giant',
+        icon: GiJupiter,
+        description: 'Gas giant planet'
     },
     {
-        label: 'Castles',
-        icon: GiCastle,
-        description: 'This property is in a castle!'
+        label: 'Rings',
+        icon: SiSaturn,
+        description: 'Planet with rings'
     },
     {
-        label: 'Camping',
-        icon: GiForestCamp,
-        description: 'This property has camping activities!'
+        label: 'Red Giant',
+        icon: GiSun,
+        description: 'Luminous giant star'
     },
     {
-        label: 'Artic',
-        icon: BsSnow,
-        description: 'This property is in the Artic!'
+        label: 'Neutron Star',
+        icon: GiAtomicSlashes,
+        description: 'The collapsed core of a supergiant star'
     },
     {
-        label: 'Cave',
-        icon: GiCaveEntrance,
-        description: 'This property is in a cave!'
+        label: 'Nebula',
+        icon: GiDustCloud,
+        description: 'Giant cloud of dust and gas in space'
     },
     {
-        label: 'Desert',
-        icon: GiCactus,
-        description: 'This property is in the desert'
+        label: 'Quasar',
+        icon: SiQuasar,
+        description: 'Gas spiraling at high velocity into a huge black hole'
     },
     {
-        label: 'Barns',
-        icon: GiBarn,
-        description: 'This property is in the barn!'
+        label: 'Black Hole',
+        icon: GiBlackHoleBolas,
+        description: 'Body of extremely intense gravity from which nothing can escape'
     },
     {
-        label: 'Lux',
-        icon: IoDiamond,
-        description: 'This property is luxurious!'
-    }
+        label: 'Worm Hole',
+        icon: GiLeechingWorm,
+        description: "'Tunnel' between two distant points in our universe"
+    },
 ]
 
 const Categories: React.FC = () => {
