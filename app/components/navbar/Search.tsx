@@ -100,7 +100,7 @@ const Search = () => {
                     <div className="hidden sm:block">{guestLabel}</div>
                     <div className="
                     p-2
-                    bg-rose-500
+                    bg-[#239460]
                     rounded-full
                     text-white
                     ">

@@ -9,7 +9,6 @@ import useSearchModal from "@/app/hooks/useSearchModal";
 import Modal from "./Modal";
 import dynamic from "next/dynamic";
 import CountrySelect, { CountrySelectValue } from '../inputs/CountrySelect'
-import queryString from "query-string";
 import { formatISO } from 'date-fns'
 import Heading from "../Heading";
 import Calendar from "../inputs/Calendar";
