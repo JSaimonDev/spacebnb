@@ -16,9 +16,9 @@ import { usePathname, useSearchParams } from "next/navigation"
 
 export const categories = [
     {
-        label: 'Moon',
+        label: 'Satellite',
         icon: GiMoonOrbit,
-        description: 'Satellite'
+        description: 'Moon orbiting planet'
     },
     {
         label: 'Asteroid',
@@ -36,17 +36,17 @@ export const categories = [
         description: 'Terrestrial planet'
     },
     {
-        label: 'Ocean',
+        label: 'Ocean Planet',
         icon: IoWater,
         description: 'Ocean planet'
     },
     {
-        label: 'Lava',
+        label: 'Lava Planet',
         icon: GiLava,
         description: 'Lava planet'
     },
     {
-        label: 'Ice',
+        label: 'Ice Planet',
         icon: GiFrozenOrb,
         description: 'Ice planet'
     },
@@ -56,7 +56,7 @@ export const categories = [
         description: 'Gas giant planet'
     },
     {
-        label: 'Rings',
+        label: 'Rings System',
         icon: SiSaturn,
         description: 'Planet with rings'
     },
