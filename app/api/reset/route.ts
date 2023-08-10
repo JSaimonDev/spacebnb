@@ -6,13 +6,12 @@ export async function POST(req: NextRequest) {
   const createdUsers = [];
   try {
     prisma.$connect()
-    // Delete all data from all tables
+
     const deletedUsers = await prisma.user.deleteMany();
     const deletedAccounts = await prisma.account.deleteMany();
     const deletedListings = await prisma.listing.deleteMany();
     const deletedReservations = await prisma.reservation.deleteMany();
 
-    // Create users
     const users = [
       {
         name: 'The Galactic Empire',
@@ -25,6 +24,19 @@ export async function POST(req: NextRequest) {
         image: 'https://res.cloudinary.com/dqunjerlj/image/upload/v1691651314/spacebnb/Ackbar_milestone_ROTJ_cover_1_fv0kul.jpg',
       }
     ];
+
+    const listings = [
+      {
+        title: 'Earth moon villa',
+        description: 'Beautiful house on earth moon',
+        imageSrc: 'https://res.cloudinary.com/dqunjerlj/image/upload/v1691654186/spacebnb/moon_villa_vwkkxp.jpg',
+        category: 'moon',
+        roomCount: 3,
+        guestCount: 6,
+        locationValue: 'Moon',
+        price: 150
+      }
+    ]
 
         
     for (const user of users) {
