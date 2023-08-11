@@ -2,7 +2,6 @@
 
 import { SafeUser } from "@/app/types"
 import { IconType } from "react-icons"
-import useCountries from "@/app/hooks/useCountries "
 import Avatar from "../Avatar"
 import ListingCategory from "./ListingCategory"
 import Image from "next/image"
@@ -30,9 +29,6 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
     category,
     locationValue
 }) => {
-    const { getByValue } = useCountries()
-
-    const coordinates = getByValue(locationValue)?.latlng
 
     return (
         <div className="col-span-4 flex flex-col gap-8">

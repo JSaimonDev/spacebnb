@@ -31,7 +31,7 @@ export const categories = [
         description: 'Icy space object with gas tail'
     },
     {
-        label: 'Terrestrial',
+        label: 'Terrestrial Planet',
         icon: FaEarthAsia,
         description: 'Terrestrial planet'
     },

@@ -18,15 +18,14 @@ interface ListingHeadProps {
 const ListingHead: React.FC<ListingHeadProps> = ({
     title, locationValue, imageSrc, id, currentUser
 }) => {
-    const { getByValue } = useCountries()
 
-    const location = getByValue(locationValue)
+    const location = locationValue
 
     return (
         <>
             <Heading
                 title={title}
-                subtitle={`${location?.region}, ${location?.label}`}
+                subtitle={`${location}`}
             />
             <div
                 className="
@@ -38,15 +37,15 @@ const ListingHead: React.FC<ListingHeadProps> = ({
                 "
             >
                 <Image
-                alt="Image"
-                src={imageSrc}
-                fill
-                className="object-cover w-full"
+                    alt="Image"
+                    src={imageSrc}
+                    fill
+                    className="object-cover w-full"
                 />
                 <div className="absolute top-5 right-5">
                     <HeartButton
-                    listingId={id}
-                    currentUser={currentUser}
+                        listingId={id}
+                        currentUser={currentUser}
                     />
                 </div>
             </div>
