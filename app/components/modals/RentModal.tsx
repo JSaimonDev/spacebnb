@@ -16,6 +16,7 @@ import Input from '../inputs/Input'
 import axios from "axios"
 import { toast } from "react-hot-toast"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 
 enum STEPS {
@@ -163,9 +164,7 @@ const RentModal = () => {
                     value={location}
                     onChange={value => setCustomValue('location', value)}
                 />
-                <Map
-                    center={location?.latlng}
-                />
+                <Image src='/images/galaxy-animated.gif' alt='galaxy gif' width={600} height={256} className="rounded-lg" />
             </div>
         )
     }
